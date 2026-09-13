@@ -1,0 +1,9 @@
+torch
+numpy
+pandas
+matplotlib
+Pillow
+deepforest
+opencv-python
+shapely
+geopandas
