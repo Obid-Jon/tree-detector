@@ -133,3 +133,18 @@ MIT. Делайте что хотите.
 
 Obid-Jon
 https://github.com/Obid-Jon
+
+## Запуск через Docker
+
+Если не хочется возиться с зависимостями, есть Dockerfile.
+
+Собрать:
+
+    docker build -t tree-detector .
+
+Запустить на изображении из папки data/:
+
+    docker run --rm -v $(pwd)/data:/app/data -v $(pwd)/results:/app/results \
+        tree-detector python tree_detector.py data/image.jpg
+
+Для Windows PowerShell используйте ${PWD} вместо $(pwd).

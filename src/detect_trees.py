@@ -111,7 +111,6 @@ class TreeDetector:
         if 'score' in detections.columns:
             initial_count = len(detections)
             detections = detections[detections['score'] >= self.confidence_threshold]
-            logger.info(f"Отфильтровано: {initial_count - len(detections)} объектов")
         
         logger.info(f"Обнаружено деревьев: {len(detections)}")
         return detections

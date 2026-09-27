@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  tree-detector:
+    build: .
+    volumes:
+      - ./data:/app/data
+      - ./results:/app/results
+    command: python tree_detector.py data/image.jpg
